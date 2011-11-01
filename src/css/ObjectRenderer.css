@@ -1,0 +1,88 @@
+/* 
+    Document   : ObjectRenderer
+    Created on : Nov 1, 2011, 10:52:19 AM
+    Author     : Pierre Gandon <pierregandon@gmail.com>
+    Description:
+        Those styles are used by the object renderer
+*/
+
+.jso-container
+{
+	font: 8pt "Courier New", Courier, mono !important;
+	text-align: left !important;
+}
+
+.jso-filter {
+	line-height: inherit !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font: inherit !important;
+	color: #ff1d49 !important;
+	text-transform: lowercase !important;
+	background-color: transparent !important;
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.jso-plus-minus {
+	display: inline-block;
+	width: 7px !important;
+	height: 7px !important;
+	font-size: 7pt !important;
+	line-height: 7px !important;
+	border: 1px solid gray !important;
+	float: left !important;
+	cursor:  pointer !important;
+	margin-left: 4px !important;
+	margin-top: 2px !important;
+	text-align: center !important;
+	background-color: #f9fcfe !important;
+}
+
+.jso-label {
+	display: block !important;
+	padding-left: 18px !important;
+}
+
+.jso-header
+{
+	margin-top: 1px;
+}
+
+.jso-name {
+	font-weight: bold !important;
+}
+
+.jso-type {
+	font-style: italic !important;
+	color: #ff1d49 !important;
+}
+
+.jso-size {
+	color: #00bb52 !important;
+}
+
+.jso-value {
+	color: #307fcb !important;
+}
+
+.jso-content {
+	margin-left: 18px !important;
+	border-left: 1px dashed #bbb !important;
+}
+
+.jso-pre
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+}
+
+.jso-loading
+{
+	background-color: #00bb52 !important;
+	color: #ffffff !important;
+	display: inline-block !important;
+	padding: 1px !important;
+}
