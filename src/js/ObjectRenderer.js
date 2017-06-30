@@ -187,7 +187,7 @@ var ObjectRenderer = Class.create(
 	describeData: function(data, name)
 	{
 		var type = this.getType(data), value = null, count = null, p, jsor, rtype,
-			pm = false, small, title = $A(), t, e;
+			pm = false, small, title = $A(), t, e, labelHtml;
 		this.undescribeData();
 		if ( name && Object.isString(name) )
 		{
@@ -205,8 +205,18 @@ var ObjectRenderer = Class.create(
 		{
 			type = rtype;
 		}
-		this.$label.update('<span class="jso-name">' + this.name + '</span>&nbsp;' +
-			'<span class="jso-type">' + rtype + '</span>');
+		if ( rtype == 'null' || rtype == 'undefined' ) {
+			rtype = null;
+		}
+
+		labelHtml = '<span class="jso-name">' + this.name + '</span>';
+
+		if ( rtype !== null ) {
+			labelHtml += '&nbsp;<span class="jso-type">' + rtype + '</span>';
+		}
+
+		this.$label.update(labelHtml);
+
 		switch ( type )
 		{
 			case 'Function':
@@ -280,6 +290,11 @@ var ObjectRenderer = Class.create(
 
 			case 'Date':
 				value = data.toUTCString();
+				break;
+
+			case 'null':
+			case 'undefined':
+				value = type;
 				break;
 
 			case 'String':
